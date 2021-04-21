@@ -1,7 +1,7 @@
 import { Button, Input, TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useState } from "react";
-import { auth, database, db } from "./fire";
+import { auth, db } from "./fire";
 const useStyles = makeStyles((theme) => ({
 	root: {
 		"& > *": {
@@ -34,10 +34,7 @@ export default function BasicTextFields() {
 				console.log(user);
 				// ...
 			})
-			.catch((error) => {
-				var errorCode = error.code;
-				var errorMessage = error.message;
-			});
+			.catch((error) => {});
 	};
 
 	const createData = (event) => {
